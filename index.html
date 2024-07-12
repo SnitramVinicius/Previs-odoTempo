@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+    <script src="scripts.js"></script>
+    <title>Document</title>
+</head>
+
+<body onload="initclock()">
+
+    <div class="data">
+        <span id="dia">00</span>
+        <span id="mes">mês</span>
+        <span id="ano">ano</span>
+    </div>
+    <div class="hora">
+        <span id="horas">00</span>:
+        <span id="minutos">00</span>
+    </div>
+
+    <div class="separador">
+        <p>|</p>
+
+    </div>
+
+    <script>
+        function updateclock() {
+            var now = new Date();
+            var dname = now.getDate();
+            var dnum = now.getMonth();
+            var yr = now.getFullYear();
+            var hou = now.getHours();
+            var min = now.getMinutes();
+
+            var months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+            // Adiciona zeros à esquerda se os minutos/horas tiverem apenas um dígito
+            if (min < 10) {
+                min = '0' + min;
+            }
+            if (hou < 10) {
+                hou = '0' + hou;
+            }
+
+            // Define o formato desejado para exibição da data
+            var formattedDate = dname + ' ' + months[dnum] + ' ' + yr;
+
+            // Atualiza os elementos no DOM
+            document.getElementById('dia').textContent = dname;
+            document.getElementById('mes').textContent = months[dnum];
+            document.getElementById('ano').textContent = yr;
+
+            // Define o formato desejado para exibição da hora
+            var formattedTime = hou + ':' + min;
+
+            // Atualiza os elementos de hora no DOM
+            document.getElementById('horas').textContent = hou;
+            document.getElementById('minutos').textContent = min;
+        }
+
+        function initclock() {
+            updateclock();
+            setInterval(updateclock, 1000); // Atualiza a cada 1 segundo (1000 milissegundos)
+        }
+    </script>
+
+
+    <div class="caixa"></div>
+
+    <div>
+        <div class="content">
+            <h2 class="text-city">Campo Grande</h2>
+        </div>
+
+        <div class="temp-clima">
+            <h1 class="temperatura">21°</h1>
+            <h2 class="clima">Nublado</h1>
+        </div>
+
+        <div class="texto-semana">Previsão para semana</div>
+        <hr>
+
+        <div class="datas">
+            <h1 class="dia1">03 Julho 2024</h1>
+            <h1 class="dia2">03 Julho 2024</h1>
+            <h1 class="dia3">03 Julho 2024</h1>
+            <h1 class="dia4">03 Julho 2024</h1>
+            <h1 class="dia5">03 Julho 2024</h1>
+            <h1 class="dia6">03 Julho 2024</h1>
+        </div>
+
+        <div class="texto">
+            <h1 class="dia1">Nublado</h1>
+            <h1 class="dia2">Nublado</h1>
+            <h1 class="dia3">Nublado</h1>
+            <h1 class="dia4">Nublado</h1>
+            <h1 class="dia5">Nublado</h1>
+            <h1 class="dia6">Nublado</h1>
+        </div>
+
+        <!-- <div class="img-clima-p">
+            <img class="dia" src="https://openweathermap.org/img/wn/04n.png" alt="clima">
+        </div> -->
+
+        <div class="img-clima">
+
+            <img class="dia1" src="https://openweathermap.org/img/wn/04n.png" alt="clima">
+            <img class="dia2" src="https://openweathermap.org/img/wn/04n.png" alt="clima">
+            <img class="dia3" src="https://openweathermap.org/img/wn/04n.png" alt="clima">
+            <img class="dia4" src="https://openweathermap.org/img/wn/04n.png" alt="clima">
+            <img class="dia5" src="https://openweathermap.org/img/wn/04n.png" alt="clima">
+            <img class="dia6" src="https://openweathermap.org/img/wn/04n.png" alt="clima">
+
+        </div>
+
+        <!-- <div class="img-temp">
+            <img class="clima" src="https://openweathermap.org/img/wn/04n.png" alt="clima">
+        </div> -->
+
+        <div class="pesquisa">
+            <input class="caixa-pesquisa" type="buscar" placeholder="Digite o nome da cidade">
+        </div>
+
+        <div class="botao">
+            <button class="botao-busca" onclick="cliqueinobotao()">
+                <img class="img-busca" src="https://www.svgrepo.com/show/488200/find.svg" alt="busca">
+            </button>
+        </div>
+        <div class="Temp-max">
+            <h1 class="dia1"> 30°C</h1>
+            <h1 class="dia2"> 30°C</h1>
+            <h1 class="dia3"> 30°C</h1>
+            <h1 class="dia4"> 30°C</h1>
+            <h1 class="dia5"> 30°C</h1>
+            <h1 class="dia6"> 30°C</h1>
+        </div>
+
+        <div class="temp-min">
+            <h1 class="dia1"> 5°C</h1>
+            <h1 class="dia2"> 5°C</h1>
+            <h1 class="dia3"> 5°C</h1>
+            <h1 class="dia4"> 5°C</h1>
+            <h1 class="dia5"> 5°C</h1>
+            <h1 class="dia6"> 5°C</h1>
+        </div>
+</body>
+
+</html>

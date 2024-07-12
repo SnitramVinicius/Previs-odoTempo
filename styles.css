@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* background-color: #f0f0f0; */
+        /* Cor de fundo apenas para visualização */
+        flex-direction: column;
+        background-image: url("data:image/jpeg;base64,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");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .caixa{
+        position: absolute;
+        width: 27vw; 
+        height: 100vh; 
+        background-color: black; 
+        opacity: 0.3;    
+        right: 0vh;
+        
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .data{
+      position: absolute;
+      /* display: flex; */
+      justify-content: center;
+      align-items: center;
+      top: 5vh;
+      right: 125vh;
+      font-size: 20px;
+      color: #fff;
+      
+    }
+.separador{
+    color: #fff;
+    position: absolute;
+    top: 5vh;
+    right: 124vh;
+
+}
+
+.hora{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 5vh;
+    right: 115vh;
+    font-size: 20px;
+    color: #fff;
+}
+
+    .content h1 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 500px;
+        top: 5vh;
+        right: 125vh;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .content .text-city {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 90px;
+        top: 20vh;
+        right: 90vh;
+        color: #fff;
+
+    }
+
+    .temp-clima .temperatura {
+        position: absolute;
+        top: 30vh;
+        /* Distância do topo */
+        right: 120vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 100px;
+        font-size: 10vw;
+        color: #fff;
+    }
+
+    .temp-clima .clima {
+        position: absolute;
+        top: 51vh;
+        /* Distância do topo */
+        right: 105vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 2vw;
+        font-weight: 10;
+        color: #fff;
+        text-transform: capitalize;
+    }
+
+
+    .datas,
+    .texto,
+    .img-clima {
+        display: flex;
+        justify-content: center;
+    }
+
+    .datas .dia1 {
+        position: absolute;
+        top: 35vh;
+        /* Distância do topo */
+        right: 18vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .datas .dia2 {
+        position: absolute;
+        top: 45vh;
+        /* Distância do topo */
+        right: 18vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .datas .dia3 {
+        position: absolute;
+        top: 55vh;
+        /* Distância do topo */
+        right: 18vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .datas .dia4 {
+        position: absolute;
+        top: 65vh;
+        /* Distância do topo */
+        right: 18vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .datas .dia5 {
+        position: absolute;
+        top: 75vh;
+        /* Distância do topo */
+        right: 18vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .datas .dia6 {
+        position: absolute;
+        top: 85vh;
+        /* Distância do topo */
+        right: 18vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .texto {
+        font-size: 8px;
+    }
+
+    .texto .dia1 {
+        position: absolute;
+        top: 38vh;
+        /* Distância do topo */
+        right: 25vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .texto .dia2 {
+        position: absolute;
+        top: 48vh;
+        /* Distância do topo */
+        right: 25vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .texto .dia3 {
+        position: absolute;
+        top: 58vh;
+        /* Distância do topo */
+        right: 25vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .texto .dia4 {
+        position: absolute;
+        top: 68vh;
+        /* Distância do topo */
+        right: 25vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .texto .dia5 {
+        position: absolute;
+        top: 78vh;
+        /* Distância do topo */
+        right: 25vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .texto .dia6 {
+        position: absolute;
+        top: 88vh;
+        /* Distância do topo */
+        right: 25vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    /* .img-clima{
+right: 200px;
+} */
+
+/* .img-clima-p{
+    position: absolute;
+    display: flex;
+    height: 20vh;
+    top: 30vh;
+    right: 100vh;
+} */
+
+    .img-clima .dia1 {
+        position: absolute;
+        top: 34vh;
+        /* Distância do topo */
+        right: 40vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        /* font-size: 20px; */
+    }
+
+    .img-clima .dia2 {
+        position: absolute;
+        top: 44vh;
+        /* Distância do topo */
+        right: 40vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+    }
+
+    .img-clima .dia3 {
+        position: absolute;
+        top: 54vh;
+        /* Distância do topo */
+        right: 40vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+    }
+
+    .img-clima .dia4 {
+        position: absolute;
+        top: 64vh;
+        /* Distância do topo */
+        right: 40vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+    }
+
+    .img-clima .dia5 {
+        position: absolute;
+        top: 74vh;
+        /* Distância do topo */
+        right: 40vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+    }
+
+    .img-clima .dia6 {
+        position: absolute;
+        top: 84vh;
+        /* Distância do topo */
+        right: 40vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+    }
+
+    .pesquisa .caixa-pesquisa {
+        position: absolute;
+        top: 10vh;
+        /* Distância do topo */
+        right: 80px;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 50px;
+        border: none;
+        width: 260px;
+        outline: none;
+    }
+
+    .botao .botao-busca {
+        position: absolute;
+        border: none;
+        border-radius: 50px;
+        outline: none;
+        padding: 10px;
+        cursor: pointer;
+        right: 20px;
+        top: 10vh;
+
+    }
+
+    .img-busca {
+        width: 22px;
+
+    }
+
+    .Temp-max .dia1 {
+        position: absolute;
+        top: 35vh;
+        /* Distância do topo */
+        right: 10vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .temp-min .dia1 {
+        position: absolute;
+        top: 35vh;
+        /* Distância do topo */
+        right: 4vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .Temp-max .dia2 {
+        position: absolute;
+        top: 45vh;
+        /* Distância do topo */
+        right: 10vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .temp-min .dia2 {
+        position: absolute;
+        top: 45vh;
+        /* Distância do topo */
+        right: 4vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .Temp-max .dia3 {
+        position: absolute;
+        top: 55vh;
+        /* Distância do topo */
+        right: 10vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .temp-min .dia3 {
+        position: absolute;
+        top: 55vh;
+        /* Distância do topo */
+        right: 4vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .Temp-max .dia4 {
+        position: absolute;
+        top: 65vh;
+        /* Distância do topo */
+        right: 10vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .temp-min .dia4 {
+        position: absolute;
+        top: 65vh;
+        /* Distância do topo */
+        right: 4vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .Temp-max .dia5 {
+        position: absolute;
+        top: 75vh;
+        /* Distância do topo */
+        right: 10vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .temp-min .dia5 {
+        position: absolute;
+        top: 75vh;
+        /* Distância do topo */
+        right: 4vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .Temp-max .dia6 {
+        position: absolute;
+        top: 85vh;
+        /* Distância do topo */
+        right: 10vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .temp-min .dia6 {
+        position: absolute;
+        top: 85vh;
+        /* Distância do topo */
+        right: 4vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .texto-semana{
+        position: absolute;
+        top: 22vh;
+        /* Distância do topo */
+        right: 1vh;
+        /* Distância da direita */
+        padding: 10px 20px;
+        font-size: 35px;
+        color: #fff; 
+    }
+
