@@ -18,14 +18,38 @@
         background-position: center;
     }
 
-    .caixa{
+    .informaçoes {
+        display: none;
+    }
+    
+    .informaçoes.show {
+        display: block;
+    }
+
+.alerta1{
+    position: absolute;
+    top: 35%;
+    right: 28%;
+    font-size: 50px;
+    color: #fff;
+}
+
+.alerta2{
+    position: absolute;
+    top: 35%;
+    right: 26%;
+    font-size: 50px;
+    color: #fff;
+}
+
+.caixa{
+    display: none;
         position: absolute;
-        width: 27vw; 
+        width: 22vw; 
         height: 100vh; 
         background-color: black; 
-        opacity: 0.3;    
-        right: 0vh;
-        
+        opacity: 0.3;
+        right: 0;    
     }
 
     .content {
@@ -38,7 +62,7 @@
       justify-content: center;
       align-items: center;
       top: 5vh;
-      right: 125vh;
+      right: 50.5%;
       font-size: 20px;
       color: #fff;
       
@@ -47,7 +71,7 @@
     color: #fff;
     position: absolute;
     top: 5vh;
-    right: 124vh;
+    right: 50%;
 
 }
 
@@ -56,22 +80,10 @@
     justify-content: center;
     align-items: center;
     top: 5vh;
-    right: 115vh;
+    right: 47.1%;
     font-size: 20px;
     color: #fff;
 }
-
-    .content h1 {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 500px;
-        top: 5vh;
-        right: 125vh;
-        font-size: 20px;
-        color: #fff;
-    }
 
     .content .text-city {
         position: absolute;
@@ -110,22 +122,14 @@
         text-transform: capitalize;
     }
 
-
-    .datas,
-    .texto,
-    .img-clima {
-        display: flex;
-        justify-content: center;
-    }
-
     .datas .dia1 {
         position: absolute;
         top: 35vh;
         /* Distância do topo */
-        right: 18vh;
+        right: 15vh;
         /* Distância da direita */
         padding: 10px 20px;
-        font-size: 20px;
+        font-size: 25px;
         color: #fff;
     }
 
@@ -133,10 +137,10 @@
         position: absolute;
         top: 45vh;
         /* Distância do topo */
-        right: 18vh;
+        right: 15vh;
         /* Distância da direita */
         padding: 10px 20px;
-        font-size: 20px;
+        font-size: 25px;
         color: #fff;
     }
 
@@ -144,10 +148,10 @@
         position: absolute;
         top: 55vh;
         /* Distância do topo */
-        right: 18vh;
+        right: 15vh;
         /* Distância da direita */
         padding: 10px 20px;
-        font-size: 20px;
+        font-size: 25px;
         color: #fff;
     }
 
@@ -155,10 +159,10 @@
         position: absolute;
         top: 65vh;
         /* Distância do topo */
-        right: 18vh;
+        right: 15vh;
         /* Distância da direita */
         padding: 10px 20px;
-        font-size: 20px;
+        font-size: 25px;
         color: #fff;
     }
 
@@ -166,10 +170,10 @@
         position: absolute;
         top: 75vh;
         /* Distância do topo */
-        right: 18vh;
+        right: 15vh;
         /* Distância da direita */
         padding: 10px 20px;
-        font-size: 20px;
+        font-size: 25px;
         color: #fff;
     }
 
@@ -177,22 +181,18 @@
         position: absolute;
         top: 85vh;
         /* Distância do topo */
-        right: 18vh;
+        right: 15vh;
         /* Distância da direita */
         padding: 10px 20px;
-        font-size: 20px;
+        font-size: 25px;
         color: #fff;
-    }
-
-    .texto {
-        font-size: 8px;
     }
 
     .texto .dia1 {
         position: absolute;
         top: 38vh;
         /* Distância do topo */
-        right: 25vh;
+        right: 23vh;
         /* Distância da direita */
         padding: 10px 20px;
         font-size: 20px;
@@ -203,7 +203,7 @@
         position: absolute;
         top: 48vh;
         /* Distância do topo */
-        right: 25vh;
+        right: 23vh;
         /* Distância da direita */
         padding: 10px 20px;
         font-size: 20px;
@@ -214,7 +214,7 @@
         position: absolute;
         top: 58vh;
         /* Distância do topo */
-        right: 25vh;
+        right: 23vh;
         /* Distância da direita */
         padding: 10px 20px;
         font-size: 20px;
@@ -225,7 +225,7 @@
         position: absolute;
         top: 68vh;
         /* Distância do topo */
-        right: 25vh;
+        right: 23vh;
         /* Distância da direita */
         padding: 10px 20px;
         font-size: 20px;
@@ -236,7 +236,7 @@
         position: absolute;
         top: 78vh;
         /* Distância do topo */
-        right: 25vh;
+        right: 23vh;
         /* Distância da direita */
         padding: 10px 20px;
         font-size: 20px;
@@ -247,30 +247,18 @@
         position: absolute;
         top: 88vh;
         /* Distância do topo */
-        right: 25vh;
+        right: 23vh;
         /* Distância da direita */
         padding: 10px 20px;
         font-size: 20px;
         color: #fff;
     }
 
-    /* .img-clima{
-right: 200px;
-} */
-
-/* .img-clima-p{
-    position: absolute;
-    display: flex;
-    height: 20vh;
-    top: 30vh;
-    right: 100vh;
-} */
-
     .img-clima .dia1 {
         position: absolute;
         top: 34vh;
         /* Distância do topo */
-        right: 40vh;
+        right: 33vh;
         /* Distância da direita */
         padding: 10px 20px;
         /* font-size: 20px; */
@@ -280,7 +268,7 @@ right: 200px;
         position: absolute;
         top: 44vh;
         /* Distância do topo */
-        right: 40vh;
+        right: 33vh;
         /* Distância da direita */
         padding: 10px 20px;
     }
@@ -289,7 +277,7 @@ right: 200px;
         position: absolute;
         top: 54vh;
         /* Distância do topo */
-        right: 40vh;
+        right: 33vh;
         /* Distância da direita */
         padding: 10px 20px;
     }
@@ -298,7 +286,7 @@ right: 200px;
         position: absolute;
         top: 64vh;
         /* Distância do topo */
-        right: 40vh;
+        right: 33vh;
         /* Distância da direita */
         padding: 10px 20px;
     }
@@ -307,7 +295,7 @@ right: 200px;
         position: absolute;
         top: 74vh;
         /* Distância do topo */
-        right: 40vh;
+        right: 33vh;
         /* Distância da direita */
         padding: 10px 20px;
     }
@@ -316,7 +304,7 @@ right: 200px;
         position: absolute;
         top: 84vh;
         /* Distância do topo */
-        right: 40vh;
+        right: 33vh;
         /* Distância da direita */
         padding: 10px 20px;
     }
@@ -325,14 +313,15 @@ right: 200px;
         position: absolute;
         top: 10vh;
         /* Distância do topo */
-        right: 80px;
+        right: -50px;
         /* Distância da direita */
-        padding: 10px 20px;
+        padding: 10px;
         font-size: 20px;
         border-radius: 50px;
         border: none;
-        width: 260px;
+        width: 340px;
         outline: none;
+        text-align: center;
     }
 
     .botao .botao-busca {
@@ -342,7 +331,7 @@ right: 200px;
         outline: none;
         padding: 10px;
         cursor: pointer;
-        right: 20px;
+        right: -100px;
         top: 10vh;
 
     }
@@ -358,7 +347,6 @@ right: 200px;
         /* Distância do topo */
         right: 10vh;
         /* Distância da direita */
-        padding: 10px 20px;
         font-size: 15px;
         color: #fff;
     }
@@ -369,7 +357,6 @@ right: 200px;
         /* Distância do topo */
         right: 4vh;
         /* Distância da direita */
-        padding: 10px 20px;
         font-size: 15px;
         color: #fff;
     }
@@ -380,7 +367,6 @@ right: 200px;
         /* Distância do topo */
         right: 10vh;
         /* Distância da direita */
-        padding: 10px 20px;
         font-size: 15px;
         color: #fff;
     }
@@ -391,7 +377,6 @@ right: 200px;
         /* Distância do topo */
         right: 4vh;
         /* Distância da direita */
-        padding: 10px 20px;
         font-size: 15px;
         color: #fff;
     }
@@ -402,7 +387,6 @@ right: 200px;
         /* Distância do topo */
         right: 10vh;
         /* Distância da direita */
-        padding: 10px 20px;
         font-size: 15px;
         color: #fff;
     }
@@ -413,7 +397,6 @@ right: 200px;
         /* Distância do topo */
         right: 4vh;
         /* Distância da direita */
-        padding: 10px 20px;
         font-size: 15px;
         color: #fff;
     }
@@ -424,7 +407,6 @@ right: 200px;
         /* Distância do topo */
         right: 10vh;
         /* Distância da direita */
-        padding: 10px 20px;
         font-size: 15px;
         color: #fff;
     }
@@ -435,7 +417,6 @@ right: 200px;
         /* Distância do topo */
         right: 4vh;
         /* Distância da direita */
-        padding: 10px 20px;
         font-size: 15px;
         color: #fff;
     }
@@ -446,7 +427,6 @@ right: 200px;
         /* Distância do topo */
         right: 10vh;
         /* Distância da direita */
-        padding: 10px 20px;
         font-size: 15px;
         color: #fff;
     }
@@ -457,7 +437,6 @@ right: 200px;
         /* Distância do topo */
         right: 4vh;
         /* Distância da direita */
-        padding: 10px 20px;
         font-size: 15px;
         color: #fff;
     }
@@ -468,7 +447,6 @@ right: 200px;
         /* Distância do topo */
         right: 10vh;
         /* Distância da direita */
-        padding: 10px 20px;
         font-size: 15px;
         color: #fff;
     }
@@ -479,7 +457,6 @@ right: 200px;
         /* Distância do topo */
         right: 4vh;
         /* Distância da direita */
-        padding: 10px 20px;
         font-size: 15px;
         color: #fff;
     }
@@ -495,3 +472,616 @@ right: 200px;
         color: #fff; 
     }
 
+    .pesquisa-container {
+        flex-direction: column;
+        position: absolute;
+        top: 30%;
+        left: 55%;
+    }
+    
+    .pesquisa-container.apos-busca {
+       position: absolute;
+       top: 0%;
+        right: 6%;
+        transform: translate(0, 0);
+        flex-direction: row;
+    }
+    
+    .erro-imagem {
+        display: flex;
+        position: absolute;
+        display: none;
+        text-align: center;
+        top: 16%;
+        right:53%;
+    }
+    
+    .erro-imagem img {
+        max-width: 500px;
+        height: auto;
+    }
+    
+    
+    .sem-cidade {
+        display: flex;
+        position: absolute;
+        display: none;
+        text-align: center;
+        top: 28%;
+        right:54%;
+    }
+    
+    .sem-cidade img{
+        max-width: 400px;
+        height: auto;
+    }
+    
+.dias-max .dia1{
+    display: flex;
+    position: absolute;
+    color: #fff;
+    top: 85%;
+    right:64.8%;
+    font-size: 22px;
+}
+    .dias-max .dia2{
+        display: flex;
+        position: absolute;
+        color: #fff;
+        top: 85%;
+        right:60%;
+        font-size: 22px;
+    }
+    .dias-max .dia3{
+        display: flex;
+        position: absolute;
+        color: #fff;
+        top: 85%;
+        right:55.1%;
+        font-size: 22px;
+    }
+    .dias-max .dia4{
+        display: flex;
+        position: absolute;
+        color: #fff;
+        top: 85%;
+        right:50.5%;
+        font-size: 22px;
+    }
+    .dias-max .dia5{
+        display: flex;
+        position: absolute;
+        color: #fff;
+        top: 85%;
+        right:45.6%;
+        font-size: 22px;
+    }
+    .dias-max .dia6{
+        display: flex;
+        position: absolute;
+        color: #fff;
+        top: 85%;
+        right:41%;
+        font-size: 22px;
+    }
+.horas-dia .hora1{
+        display: flex;
+        position: absolute;
+        color: #fff;
+        top: 76%;
+        right:65%;
+        font-size: 15px;
+    }
+    .horas-dia .hora2{
+        display: flex;
+        position: absolute;
+        color: #fff;
+        top: 76%;
+        right:60.5%;
+        font-size: 15px;
+    }
+    .horas-dia .hora3{
+        display: flex;
+        position: absolute;
+        color: #fff;
+        top: 76%;
+        right:55.5%;
+        font-size: 15px;
+    }
+    .horas-dia .hora4{
+        display: flex;
+        position: absolute;
+        color: #fff;
+        top: 76%;
+        right:51%;
+        font-size: 15px;
+    }
+    .horas-dia .hora5{
+        display: flex;
+        position: absolute;
+        color: #fff;
+        top: 76%;
+        right:46%;
+        font-size: 15px;
+    }
+    .horas-dia .hora6{
+        display: flex;
+        position: absolute;
+        color: #fff;
+        top: 76%;
+        right:41.4%;
+        font-size: 15px;
+    }
+
+.container1{
+    right: 63.8%;
+    position: absolute;
+    display: flex;
+    top: 75%;
+    background-color: #000;
+    opacity: 0.4; 
+    padding: 65px 45px;
+    border: none;  
+    border-radius: 20%;
+}
+.container2{
+    right: 59%;
+    position: absolute;
+    display: flex;
+    top: 75%;
+    background-color: #000;
+    opacity: 0.4; 
+    padding: 65px 45px;
+    border: none;  
+    border-radius: 20%;
+}
+.container3{
+    right: 54.2%;
+    position: absolute;
+    display: flex;
+    top: 75%;
+    background-color: #000;
+    opacity: 0.4; 
+    padding: 65px 45px;
+    border: none;  
+    border-radius: 20%;
+}
+.container4{
+    right: 49.5%;
+    position: absolute;
+    display: flex;
+    top: 75%;
+    background-color: #000;
+    opacity: 0.4; 
+    padding: 65px 45px;
+    border: none;  
+    border-radius: 20%;
+}
+.container5{
+    right: 44.7%;
+    position: absolute;
+    display: flex;
+    top: 75%;
+    background-color: #000;
+    opacity: 0.4; 
+    padding: 65px 45px;
+    border: none;  
+    border-radius: 20%;
+}
+.container6{
+    right: 39.9%;
+    position: absolute;
+    display: flex;
+    top: 75%;
+    background-color: #000;
+    opacity: 0.4; 
+    padding: 65px 45px;
+    border: none;  
+    border-radius: 20%;
+}
+
+.img-mx-mn .dia1{
+    display: flex;
+    position: absolute;
+    top: 78%;
+    right:64.2%;
+    width: 70px;
+}
+.img-mx-mn .dia2{
+    display: flex;
+    position: absolute;
+    top: 78%;
+    right:59.5%;
+    width: 70px;
+}
+.img-mx-mn .dia3{
+    display: flex;
+    position: absolute;
+    top: 78%;
+    right:54.6%;
+    width: 70px;
+}
+.img-mx-mn .dia4{
+    display: flex;
+    position: absolute;
+    top: 78%;
+    right:50%;
+    width: 70px;
+}
+.img-mx-mn .dia5{
+    display: flex;
+    position: absolute;
+    top: 78%;
+    right:45.2%;
+    width: 70px;
+}
+.img-mx-mn .dia6{
+    display: flex;
+    position: absolute;
+    top: 78%;
+    right:40.5%;
+    width: 70px;
+}
+
+@media screen and (max-width: 1366px){
+    .data{
+        top: 5%;
+        right: 54%;
+        font-size: 15px;
+    }
+    .hora{
+        top: 5%;
+        right: 50.5%;
+        font-size: 15px;
+    }
+    .separador{
+        top: 4.6%;
+        right: 53.5%;
+    }
+
+    .alerta1{
+        top: 45%;
+        right: 30%;
+        font-size: 50px;
+    }
+    
+    .alerta2{
+        top: 40%;
+        right: 33%;
+        font-size: 45px;
+    }
+
+    .botao .botao-busca {
+        right: -80px;
+}
+
+    .pesquisa .caixa-pesquisa {
+        right: -5%;
+        width: 280px;
+    }
+
+    .caixa{
+        width: 26vw; 
+    }
+
+    .content .text-city {
+        font-size: 80px;
+        right: 85vh;
+    }
+
+    .temp-clima .temperatura {
+        right: 57%;
+    }
+
+    .temp-clima .clima {
+        right: 50%;
+    }
+
+    .texto-semana{
+        top: 19%;
+        right: 1vh;
+        font-size: 35px;
+    }
+
+    .datas .dia1 {
+        right: 19vh;
+        top: 34.5vh;
+        font-size: 18px;  
+    }
+
+    .datas .dia2 {
+        right: 19vh;
+        top: 44.5vh;
+        font-size: 18px;  
+    }
+
+    .datas .dia3 {
+        right: 19vh;
+        top: 54.5vh;
+        font-size: 18px;  
+    }
+
+    .datas .dia4 {
+        right: 19vh;
+        top: 64.5vh;
+        font-size: 18px;  
+    }
+
+    .datas .dia5 {
+        right: 19vh;
+        top: 74.5vh;
+        font-size: 18px;  
+    }
+
+    .datas .dia6 {
+        right: 19vh;
+        top: 84.5vh;
+        font-size: 18px;  
+    }
+
+    .texto .dia1 {
+        right: 25vh;
+        font-size: 18px;
+    }
+
+    .texto .dia2 {
+        right: 25vh;
+        font-size: 18px;
+    }
+
+    .texto .dia3 {
+        right: 25vh;
+        font-size: 18px;
+    }
+
+    .texto .dia4 {
+        right: 25vh;
+        font-size: 18px;
+    }
+
+    .texto .dia5 {
+        right: 25vh;
+        font-size: 18px;
+    }
+
+    .texto .dia6 {
+        right: 25vh;
+        font-size: 18px;
+    }
+
+    .img-clima .dia1{
+        right: 40vh;
+    }
+
+    .Temp-max .dia1{
+        right: 10vh;
+    }
+
+    .temp-min .dia1{
+        right: 4vh;
+    }
+    .img-clima .dia2{
+        right: 40vh;
+    }
+
+    .Temp-max .dia2{
+        right: 10vh;
+    }
+
+    .temp-min .dia2{
+        right: 4vh;
+    }
+
+    .img-clima .dia3{
+        right: 40vh;
+    }
+
+    .Temp-max .dia3{
+        right: 10vh;
+    }
+
+    .temp-min .dia3{
+        right: 4vh;
+    }
+
+    .img-clima .dia4{
+        right: 40vh;
+    }
+
+    .Temp-max .dia4{
+        right: 10vh;
+    }
+
+    .temp-min .dia4{
+        right: 4vh;
+    }
+
+    .img-clima .dia5{
+        right: 40vh;
+    }
+
+    .Temp-max .dia5{
+        right: 10vh;
+    }
+
+    .temp-min .dia5{
+        right: 4vh;
+    }
+
+    .img-clima .dia6{
+        right: 40vh;
+    }
+
+    .Temp-max .dia6{
+        right: 10vh;
+    }
+
+    .temp-min .dia6{
+        right: 4vh;
+    }
+
+.dias-max .dia1{
+    right: 73%;
+    font-size: 17px;
+}
+    .dias-max .dia2{
+        right:67%;
+        font-size: 17px;
+    }
+    .dias-max .dia3{
+        right:61%;
+        font-size: 17px;
+    }
+    .dias-max .dia4{
+        right:55%;
+        font-size: 17px;
+    }
+    .dias-max .dia5{
+        right:49%;
+        font-size: 17px;
+    }
+    .dias-max .dia6{
+        right:43%;
+        font-size: 17px;
+    }
+.horas-dia .hora1{
+        right:73%;
+        font-size: 13px;
+    }
+    .horas-dia .hora2{
+        right:67%;
+        font-size: 13px;
+    }
+    .horas-dia .hora3{
+        right:61%;
+        font-size: 13px;
+    }
+    .horas-dia .hora4{
+        right:55%;
+        font-size: 13px;
+    }
+    .horas-dia .hora5{
+        right:49%;
+        font-size: 13px;
+    }
+    .horas-dia .hora6{
+        right:43%;
+        font-size: 13px;
+    }
+
+.container1{
+    right: 71%;
+    top: 74%;
+    padding: 50px 40px;
+
+}
+.container2{
+    right: 65%;
+    top: 74%;
+    padding: 50px 40px;
+}
+.container3{
+    right: 59%;
+    top: 74%;
+    padding: 50px 40px;
+}
+.container4{
+    right: 53%;
+    top: 74%;
+    padding: 50px 40px;
+}
+.container5{
+    right: 47%;
+    top: 74%;
+    padding: 50px 40px;
+}
+.container6{
+    right: 41%;
+    top: 74%;
+    padding: 50px 40px;
+}
+
+.img-mx-mn .dia1{
+
+    top: 77%;
+    right:72%;
+    width: 60px;
+}
+.img-mx-mn .dia2{
+    top: 77%;
+    right:66%;
+    width: 60px;
+}
+.img-mx-mn .dia3{
+    top: 77%;
+    right:60%;
+    width: 60px;
+}
+.img-mx-mn .dia4{
+    top: 77%;
+    right:54%;
+    width: 60px;
+}
+.img-mx-mn .dia5{
+    top: 77%;
+    right:48%;
+    width: 60px;
+}
+.img-mx-mn .dia6{
+    top: 77%;
+    right:42%;
+    width: 60px;
+}
+
+}
+
+ @media only screen and (max-width: 768px) { 
+.flex{
+    flex-direction: column;
+}
+
+.data{
+display: none;
+}
+.hora{
+display: none;
+}
+.separador{
+display: none;
+}
+
+.alerta1{
+    top: 45%;
+    right: 10%;
+    font-size: 15px;
+}
+
+.erro-imagem {
+    top: 32.3%;
+    right:46%;
+}
+
+.erro-imagem img {
+    max-width: 200px;
+    height: auto;
+}
+
+.alerta2{
+    top: 45%;
+    right: 10%;
+    font-size: 15px;
+}
+
+.sem-cidade {
+    top: 36.9%;
+    right:49%;
+}
+
+.sem-cidade img{
+    max-width: 200px;
+    height: auto;
+}
+
+
+
+}
