@@ -1,8 +1,8 @@
 const key = "260f2fe32f230748d41342692644204f";
 
-function colocardadosnatela(dados) {
+function colocarDadosNaTela(dados) {
     if (dados.cod !== 200) {
-        document.querySelector(".alerta1").innerHTML = "<strong> Cidade não encontrada </strong>. <br> Por favor, tente novamente.";
+        document.querySelector(".alerta1").innerHTML = "<strong>Cidade não encontrada</strong>.<br>Por favor, tente novamente.";
         document.querySelector(".text-city").innerHTML = "";
         document.querySelector(".temperatura").innerHTML = "";
         document.querySelector(".clima").innerHTML = "";
@@ -20,32 +20,24 @@ function colocardadosnatela(dados) {
     document.querySelector(".informaçoes").classList.add('show');
     document.querySelector(".erro-imagem").style.display = "none";
     document.querySelector(".caixa").style.display = "block";
-
-
 }
 
-async function buscarcidade(cidade) {
+async function buscarCidadeAtual(cidade) {
     if (!cidade) {
-        document.querySelector(".alerta2").innerHTML = "<b>Por favor</b>, <br>  digite o nome de uma cidade.";
-        document.querySelector(".informaçoes").classList.remove('show');
-        document.querySelector(".sem-cidade").style.display = "block";
-        document.querySelector(".alerta1").innerHTML = "";
-        document.querySelector(".erro-imagem").style.display = "none";
-        document.querySelector(".caixa").style.display = "none";
-
+        document.querySelector(".alerta1").innerHTML = "<strong>Por favor</strong>, digite o nome de uma cidade.";
         return;
+        console.log(dados);
     }
-    const dados = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${key}&lang=pt_br&units=metric`).then(resposta => resposta.json());
-    document.querySelector(".alerta2").innerHTML = "";
-    document.querySelector(".sem-cidade").style.display = "none";        
 
-
-    colocardadosnatela(dados);
+    const dados = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${key}&lang=pt_br&units=metric`)
+        .then(resposta => resposta.json());
+        console.log(dados);
+    colocarDadosNaTela(dados);
 }
-
-function cliqueinobotao() {
+function cliqueNoBotao() {
     const cidade = document.querySelector(".caixa-pesquisa").value;
-    buscarcidade(cidade);
+    buscarCidadeAtual(cidade);
+    buscarCidadePrevisao(cidade);
     document.querySelector('.pesquisa-container').classList.add('apos-busca');
 }
 

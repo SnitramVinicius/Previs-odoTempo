@@ -3,11 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" href="/imagens/favicon.ico" type="image/x-icon">
     <title>Previsão do Tempo</title>
 </head>
 
@@ -34,13 +36,16 @@
         </div>
 
         <div class="botao">
-            <button class="botao-busca" onclick="cliqueinobotao()">
+            <button class="botao-busca" onclick="cliqueNoBotao()">
                 <img class="img-busca" src="https://www.svgrepo.com/show/488200/find.svg" alt="busca">
+            </button>
+            <button class="botao-previsao" onclick="cliqueNoBotaoPrevisão()">
             </button>
         </div>
     </div>
 
     <div class="alerta1"></div> 
+    <!-- alertas são para quando não se digita a cidade certa ou não digita a cidade -->
     <div class="alerta2"></div>
 
     <div class="informaçoes">
@@ -63,13 +68,13 @@
         <div class="container5"></div>
         <div class="container6"></div>
 
+
         <div class="datas">
             <h1 class="dia1">03 Julho 2024</h1>
             <h1 class="dia2">03 Julho 2024</h1>
             <h1 class="dia3">03 Julho 2024</h1>
             <h1 class="dia4">03 Julho 2024</h1>
             <h1 class="dia5">03 Julho 2024</h1>
-            <h1 class="dia6">03 Julho 2024</h1>
         </div>
 
 <div class="dias-max">
@@ -88,6 +93,7 @@
     <h1 class="hora4">13:00</h1>
     <h1 class="hora5">14:00</h1>
     <h1 class="hora6">15:00</h1>
+
 </div>
 
 <div class="img-mx-mn">
@@ -105,7 +111,6 @@
             <h1 class="dia3">Nublado</h1>
             <h1 class="dia4">Nublado</h1>
             <h1 class="dia5">Nublado</h1>
-            <h1 class="dia6">Nublado</h1>
         </div>
 
         <div class="img-clima">
@@ -114,15 +119,12 @@
             <img class="dia3" src="https://openweathermap.org/img/wn/04n.png" alt="clima">
             <img class="dia4" src="https://openweathermap.org/img/wn/04n.png" alt="clima">
             <img class="dia5" src="https://openweathermap.org/img/wn/04n.png" alt="clima">
-            <img class="dia6" src="https://openweathermap.org/img/wn/04n.png" alt="clima">
-
             <div class="Temp-max">
                 <h1 class="dia1"> 30°C</h1>
                 <h1 class="dia2"> 30°C</h1>
                 <h1 class="dia3"> 30°C</h1>
                 <h1 class="dia4"> 30°C</h1>
                 <h1 class="dia5"> 30°C</h1>
-                <h1 class="dia6"> 30°C</h1>
             </div>
 
             <div class="temp-min">
@@ -131,7 +133,7 @@
                 <h1 class="dia3"> 5°C</h1>
                 <h1 class="dia4"> 5°C</h1>
                 <h1 class="dia5"> 5°C</h1>
-                <h1 class="dia6"> 5°C</h1>
+              
             </div>
         </div>
     </div>
@@ -145,6 +147,7 @@
 </div>
 
     <script src="scripts.js"></script>
+    <script src="hora.js"></script>
 </body>
 
 </html>
